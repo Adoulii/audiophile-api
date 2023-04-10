@@ -3,7 +3,7 @@ import Product from "./../Model/Product.js";
 
 export default class ProductController {
 
-  static async getAllProducts(request, response, next) {
+  static async getAllProducts(request,response) {
     try {
       const products = await Product.find();
       response.status(200).json(products);
